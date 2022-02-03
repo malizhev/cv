@@ -348,6 +348,16 @@ html {
     gap: 0.5em;
     padding-left: 5em;
 
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+  
+      svg {
+        height: 12px;
+      }
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -384,7 +394,6 @@ html {
 
     &-primary {
       font-size: 1.25em;
-      max-width: 60ch;
     }
 
     &-period {
@@ -507,7 +516,7 @@ html {
 .education,
 .achievments {
   font-size: 8pt;
-  padding: 2em 3em;
+  padding: 3em 3em 2em;
 }
 
 //TEMP
