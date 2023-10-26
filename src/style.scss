@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -6,7 +8,8 @@
   margin: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -15,16 +18,29 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -43,7 +59,7 @@ a {
 
 html {
   color: var(--gray-9);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
@@ -52,12 +68,13 @@ html {
 .page {
   position: relative;
   page-break-after: always;
-  background-color: #fff; 
+  background-color: #fff;
   width: 209.75mm;
   height: 297mm;
   margin: 0 auto;
   box-shadow: var(--shadow-3);
   font-size: 8pt;
+  overflow: hidden;
 
   &-footer {
     position: absolute;
@@ -66,7 +83,7 @@ html {
     padding: 1rem 2rem;
     font-size: 0.875em;
     font-weight: 500;
-    opacity: .5;
+    opacity: 0.5;
   }
 
   & + & {
@@ -100,7 +117,7 @@ html {
 
   &-main {
     display: grid;
-    gap: .25rem;
+    gap: 0.25rem;
   }
 
   &-name {
@@ -113,7 +130,7 @@ html {
   }
 
   &-experience {
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -219,7 +236,7 @@ html {
     padding-top: 2em;
     font-size: 8pt;
   }
-  
+
   &-section {
     display: grid;
     gap: 2em;
@@ -249,12 +266,11 @@ html {
       }
 
       figcaption {
-        font-family: 'JetBrains Mono', monospace;
+        font-family: "JetBrains Mono", monospace;
         font-size: 0.75em;
         font-weight: bold;
         color: var(--gray-7);
       }
-      
     }
 
     &-low {
@@ -264,25 +280,30 @@ html {
       padding: 1.5rem 1.5rem 1.5rem;
       gap: 1rem;
       background: var(--gray-1);
-      
+
       &-list {
         display: flex;
         gap: 1em;
-  
+        justify-content: center;
+
+        figure {
+          width: 2.5rem;
+        }
+
         img {
-            opacity: .5;
+          opacity: 0.5;
         }
       }
-      
+
       &-footnote {
         width: 100%;
-        font-size: .75em;
+        font-size: 0.75em;
         font-weight: 500;
-        opacity: .5;
+        opacity: 0.5;
       }
     }
   }
-  
+
   &-stack {
     padding-right: 3em;
     border-right: 2px solid var(--gray-1);
@@ -320,7 +341,7 @@ html {
     padding-top: 1em;
 
     &:last-child {
-        border-right: none;
+      border-right: none;
     }
   }
 
@@ -335,7 +356,7 @@ html {
 
     &-list {
       display: grid;
-      gap: .25em;
+      gap: 0.25em;
       padding: 0 0 0 1em;
       list-style: none;
 
@@ -356,12 +377,13 @@ html {
     display: grid;
     gap: 0.5em;
     padding-left: 5em;
+    padding-top: 0.5rem;
 
     a {
       display: flex;
       align-items: center;
       gap: 0.5em;
-  
+
       svg {
         height: 12px;
       }
@@ -405,14 +427,26 @@ html {
       font-size: 1.25em;
     }
 
+    &-reference {
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+      margin-block-start: 0.25rem;
+      margin-block-end: 0.5rem;
+
+      img {
+        height: 1rem;
+      }
+    }
+
     &-period {
       color: var(--gray-6);
       font-weight: 500;
     }
 
-    &:last-child::before {
-      display: none;
-    }
+    // &:last-child::before {
+    //   display: none;
+    // }
   }
 }
 
@@ -420,13 +454,14 @@ html {
   padding: 2em 3em 2em;
 
   &-history {
-    gap: 1.5em;
+    gap: 1em;
   }
 
   &-record {
     display: grid;
     grid-template-columns: 22em auto;
     align-items: start;
+    gap: 1rem;
   }
 
   &-project {
@@ -443,9 +478,9 @@ html {
     }
 
     &-chip {
-      font-size: .875em;
+      font-size: 0.875em;
       font-weight: bold;
-      opacity: .5;
+      opacity: 0.5;
     }
 
     &-logo {
@@ -473,7 +508,7 @@ html {
           height: 12px;
         }
       }
-      
+
       & > img {
         height: 3em;
         display: none;
@@ -482,13 +517,13 @@ html {
 
     &-stack {
       display: flex;
-  
+
       &-list {
         display: flex;
         list-style: none;
         padding: 0;
         gap: 1em;
-  
+
         img {
           height: 1.75em;
           aspect-ratio: 1;
@@ -514,11 +549,11 @@ html {
     &--elop {
       background-color: var(--indigo-0);
     }
-    
+
     &--simplifai {
       background-color: var(--violet-0);
     }
-    
+
     &--evry {
       background-color: var(--orange-0);
     }
@@ -536,7 +571,6 @@ body {
   background-color: var(--gray-0);
 }
 
-
 @media print {
   @page {
     margin: 0;
@@ -550,7 +584,7 @@ body {
 
   .page {
     width: auto;
-    height: auto;
+    height: 100%;
     box-shadow: none;
 
     & + & {
